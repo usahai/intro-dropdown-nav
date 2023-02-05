@@ -18,7 +18,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
       id="home-container"
       className=" mt-16 flex flex-row-reverse md:flex-row"
     >
-      <div id="details-lhs-container" className="flex h-[80vh] w-1/2 flex-col">
+      <div id="details-lhs-container" className="flex h-[48rem] w-1/2 flex-col">
         <div
           id="details-interactive"
           className="flex grow flex-col justify-center gap-8 "
@@ -50,7 +50,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
         </div>
       </div>
 
-      <div id="image-rhs-container" className="relative h-[80vh] w-1/2">
+      <div id="image-rhs-container" className="relative h-[48rem] w-1/2">
         <Image
           src={HeroDesktop}
           alt="Hero"
