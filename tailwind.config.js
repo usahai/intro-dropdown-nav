@@ -8,7 +8,11 @@ module.exports = {
       lg: '992px',
       xl: '1440px',
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        epilogue: ['EPILOGUE', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
