@@ -1,4 +1,5 @@
 import HeroDesktop from '@/assets/image-hero-desktop.png'
+import HeroMobile from '@/assets/image-hero-mobile.png'
 import Client1 from '@/assets/client-databiz.svg'
 import Client2 from '@/assets/client-audiophile.svg'
 import Client3 from '@/assets/client-meet.svg'
@@ -16,22 +17,28 @@ const HomePage: React.FC<HomePageProps> = (props) => {
   return (
     <div
       id="home-container"
-      className=" mt-16 flex flex-row-reverse md:flex-row"
+      className="mt-8 flex flex-col-reverse text-center xs:mt-16 xs:flex-row xs:text-left"
     >
-      <div id="details-lhs-container" className="flex h-[48rem] w-1/2 flex-col">
+      <div
+        id="details-lhs-container"
+        className="flex w-full flex-col xs:h-[48rem] xs:w-1/2"
+      >
         <div
           id="details-interactive"
           className="flex grow flex-col justify-center gap-8 "
         >
           <div id="title-text">
-            <h1 className="text-[6rem] font-bold leading-[5rem]">
+            <h1 className="hidden text-[6rem] font-bold leading-[5rem] xs:block">
               Make
               <br />
               remote work
             </h1>
+            <h1 className="mt-8 block text-4xl font-bold xs:hidden">
+              Make remote work
+            </h1>
           </div>
           <div id="description-text">
-            <p className="text-2xl text-gray-400">
+            <p className="text-lg text-gray-400 xs:text-2xl">
               Get your team in sync, no matter your location. Streamline
               processes, create team rituals, and watch productivity soar.
             </p>
@@ -42,19 +49,38 @@ const HomePage: React.FC<HomePageProps> = (props) => {
             </Button>
           </div>
         </div>
-        <div id="clients" className="flex items-center gap-10">
-          <Image src={Client1} alt="client-databiz" />
-          <Image src={Client2} alt="client-audiophile" />
-          <Image src={Client3} alt="client-meet" />
-          <Image src={Client4} alt="client-maker" />
+        <div
+          id="clients"
+          className="my-8 flex items-center justify-center gap-4 px-2 xs:my-0 xs:justify-start xs:gap-10 xs:px-0"
+        >
+          <Image
+            src={Client1}
+            alt="client-databiz"
+            className="w-1/5 xs:w-fit"
+          />
+          <Image
+            src={Client2}
+            alt="client-audiophile"
+            className="w-1/5 xs:w-fit"
+          />
+          <Image src={Client3} alt="client-meet" className="w-1/5 xs:w-fit" />
+          <Image src={Client4} alt="client-maker" className="w-1/5 xs:w-fit" />
         </div>
       </div>
 
-      <div id="image-rhs-container" className="relative h-[48rem] w-1/2">
+      <div
+        id="image-rhs-container"
+        className="relative w-full xs:h-[48rem] xs:w-1/2"
+      >
         <Image
           src={HeroDesktop}
           alt="Hero"
-          className="h-full w-full object-contain"
+          className="hidden h-full w-full object-contain xs:block"
+        />
+        <Image
+          src={HeroMobile}
+          alt="Hero"
+          className="block h-full w-full object-contain xs:hidden"
         />
       </div>
     </div>

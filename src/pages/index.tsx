@@ -13,7 +13,7 @@ export default function Home() {
       <main id="body">
         <div
           id="index-container"
-          className="mx-auto flex h-[calc(100vh-4rem)] max-w-6xl justify-center font-epilogue"
+          className="mx-auto flex max-w-6xl justify-center font-epilogue xs:h-[calc(100vh-4rem)]"
         >
           <HomePage />
         </div>
