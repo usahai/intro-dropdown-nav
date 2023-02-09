@@ -9,7 +9,7 @@ const CompanyMenu: React.FC<CompanyMenuProps> = () => {
     <div id="company-menu-btn" className={clsx(styles.dropNavLink, 'group')}>
       <span
         id="company-dropdown"
-        className=" relative inline-flex cursor-pointer items-center group-hover:text-gray-900"
+        className=" relative inline-flex cursor-pointer items-center group-hover:text-almostBlack"
       >
         <h5>Company</h5>
         <Image

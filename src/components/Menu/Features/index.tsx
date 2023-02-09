@@ -13,7 +13,7 @@ const FeaturesMenu: React.FC<FeaturesMenuProps> = () => {
     <div id="features-menu-btn" className={clsx(styles.dropNavLink, 'group')}>
       <span
         id="features-dropdown"
-        className=" relative inline-flex cursor-pointer items-center group-hover:text-gray-900"
+        className="relative inline-flex cursor-pointer items-center group-hover:text-almostBlack"
       >
         <h5>Features</h5>
         <Image
