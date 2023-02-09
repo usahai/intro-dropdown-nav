@@ -9,12 +9,14 @@ import {
 
 interface SidebarContextProviderProps {
   isOpen: boolean
-  handleChange?: () => void
+  handleOpen?: () => void
+  handleClose?: () => void
 }
 
 const SidebarContextProvider = createContext<SidebarContextProviderProps>({
   isOpen: false,
-  handleChange: undefined,
+  handleOpen: undefined,
+  handleClose: undefined,
 })
 
 const SidebarContext = ({ children }: { children: ReactNode }) => {
@@ -27,14 +29,19 @@ const SidebarContext = ({ children }: { children: ReactNode }) => {
     }
   }, [isOpen])
 
-  const handleChange = () => {
-    setOpen((prev) => !prev)
+  const handleOpen = () => {
+    setOpen(true)
+  }
+
+  const handleClose = () => {
+    setOpen(false)
   }
 
   const value = useMemo(
     () => ({
       isOpen,
-      handleChange,
+      handleOpen,
+      handleClose,
     }),
     [isOpen],
   )

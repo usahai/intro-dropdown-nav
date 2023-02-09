@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Head from 'next/head'
 
 export default function Home() {
-  const { isOpen, handleChange } = useSidebarContext()
+  const { isOpen, handleClose } = useSidebarContext()
 
   return (
     <>
@@ -23,7 +23,7 @@ export default function Home() {
               ['z-20 h-full w-full overflow-hidden bg-black/60']: isOpen,
             },
           )}
-          onClick={handleChange}
+          onClick={() => (isOpen ? handleClose?.() : undefined)}
         >
           <HomePage />
         </div>

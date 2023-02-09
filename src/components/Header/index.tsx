@@ -12,7 +12,7 @@ import LoginRegister from './LoginRegister'
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
-  const { isOpen, handleChange } = useSidebarContext()
+  const { isOpen, handleOpen } = useSidebarContext()
 
   return (
     <div
@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = () => {
       </div>
       <LoginRegister className="hidden sm:flex" />
       <div id="burger-menu" className="block sm:hidden">
-        <Button onClick={handleChange}>
+        <Button onClick={handleOpen}>
           <Image src={BurgerMenu} alt="mobile-open-menu" height={16} />
         </Button>
       </div>

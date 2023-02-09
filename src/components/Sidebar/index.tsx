@@ -8,7 +8,7 @@ import LoginRegister from '../Header/LoginRegister'
 interface SidebarProps {}
 
 const Sidebar: React.FC<SidebarProps> = () => {
-  const { isOpen, handleChange } = useSidebarContext()
+  const { isOpen, handleClose } = useSidebarContext()
 
   return (
     <aside
@@ -33,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = () => {
         <div
           id="close-sidebar-btn"
           className="flex justify-end pr-4"
-          onClick={handleChange}
+          onClick={handleClose}
         >
           <Image src={BurgerMenuClose} alt="mobile-close-menu" height={32} />
         </div>
