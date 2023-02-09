@@ -26,14 +26,17 @@ const Header: React.FC<HeaderProps> = () => {
       </div>
       <div
         id="nav-items"
-        className="hidden grow gap-12 font-medium text-gray-500 sm:flex"
+        className="hidden grow gap-12 font-medium text-mediumGray sm:flex"
       >
         <FeaturesMenu />
         <CompanyMenu />
-        <span id="careers-nav" className="cursor-pointer hover:text-gray-900">
+        <span
+          id="careers-nav"
+          className="cursor-pointer hover:text-almostBlack"
+        >
           Careers
         </span>
-        <span id="about-nav" className="cursor-pointer hover:text-gray-900">
+        <span id="about-nav" className="cursor-pointer hover:text-almostBlack">
           About
         </span>
       </div>

@@ -13,7 +13,7 @@ const FeaturesMobile: React.FC<FeaturesMobileProps> = ({ isShow }) => {
   return (
     <div
       id="features-menu-mobile-dropdown"
-      className={clsx(`ml-8 flex flex-col gap-2 text-xl text-gray-500`, {
+      className={clsx(`ml-8 flex flex-col gap-2 text-xl text-mediumGray`, {
         ['hidden']: !isShow,
       })}
     >

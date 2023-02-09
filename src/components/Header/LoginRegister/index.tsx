@@ -12,14 +12,14 @@ const LoginRegister: React.FC<LoginRegisterProp> = ({ className }) => {
       className={clsx('flex flex-col gap-4 sm:flex-row', className)}
     >
       <Button
-        className="duration-300 focus:text-gray-500"
+        className="duration-300 focus:text-mediumGray"
         onClick={() => console.log('login!')}
       >
         Login
       </Button>
       <Button
         onClick={() => console.log('register!')}
-        className="border-2 border-gray-400 duration-300 hover:border-gray-900 focus:text-gray-500"
+        className="border-2 border-gray-400 duration-300 hover:border-gray-900 focus:text-mediumGray"
         variant="outlined"
       >
         Register

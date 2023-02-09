@@ -8,7 +8,7 @@ const CompanyMobile: React.FC<CompanyMobileProps> = ({ isShow }) => {
   return (
     <div
       id="company-menu-mobile-dropdown"
-      className={clsx(`ml-8 flex flex-col gap-2 text-xl text-gray-500`, {
+      className={clsx(`ml-8 flex flex-col gap-2 text-xl text-mediumGray`, {
         ['hidden']: !isShow,
       })}
     >

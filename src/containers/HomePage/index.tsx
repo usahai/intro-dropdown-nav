@@ -38,7 +38,7 @@ const HomePage: React.FC<HomePageProps> = (props) => {
             </h1>
           </div>
           <div id="description-text">
-            <p className="text-lg text-gray-500 sm:text-2xl">
+            <p className="text-lg text-mediumGray sm:text-2xl">
               Get your team in sync, no matter your location. Streamline
               processes, create team rituals, and watch productivity soar.
             </p>

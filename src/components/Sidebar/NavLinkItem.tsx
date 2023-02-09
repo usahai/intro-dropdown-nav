@@ -13,7 +13,7 @@ const NavLinkItem: React.FC<NavLinkItemProps> = ({
   return (
     <Button
       id={id}
-      className="flex items-center gap-4 text-2xl text-gray-500 hover:text-gray-500"
+      className="flex items-center gap-4 text-2xl text-mediumGray hover:text-mediumGray"
       onClick={handleClick}
     >
       {children}
