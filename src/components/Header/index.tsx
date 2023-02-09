@@ -1,22 +1,32 @@
+import { useState } from 'react'
 import Image from 'next/image'
 import Logo from '@/assets/logo.svg'
+import BurgerMenu from '@/assets/icon-menu.svg'
 import Button from '@/containers/Button'
 import { CompanyMenu, FeaturesMenu } from '@/components/Menu'
+import Sidebar from '@/components/Sidebar'
+import { useSidebarContext } from '@/contexts/SidebarContext'
+import clsx from 'clsx'
+import LoginRegister from './LoginRegister'
 
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
+  const { isOpen, handleChange } = useSidebarContext()
+
   return (
     <div
       id="nav-bar-container"
-      className="mx-auto flex h-16 max-w-7xl items-center"
+      className={clsx('mx-auto flex h-16 max-w-7xl items-center px-4 sm:px-0', {
+        ['z-20 w-full bg-black/60']: isOpen,
+      })}
     >
-      <div id="logo" className="mb-[-0.75rem] mr-16 ">
+      <div id="logo" className="mb-[-0.75rem] grow sm:mr-16 sm:grow-0">
         <Image src={Logo} alt="company-logo" height={32} />
       </div>
       <div
         id="nav-items"
-        className="flex grow gap-12 font-medium text-gray-400"
+        className="hidden grow gap-12 font-medium text-gray-500 sm:flex"
       >
         <FeaturesMenu />
         <CompanyMenu />
@@ -27,17 +37,14 @@ const Header: React.FC<HeaderProps> = () => {
           About
         </span>
       </div>
-      <div id="user-profile-button-group" className="flex gap-4">
-        <Button className="duration-300" onClick={() => console.log('login!')}>
-          Login
+      <LoginRegister className="hidden sm:flex" />
+      <div id="burger-menu" className="block sm:hidden">
+        <Button onClick={handleChange}>
+          <Image src={BurgerMenu} alt="mobile-open-menu" height={16} />
         </Button>
-        <Button
-          onClick={() => console.log('register!')}
-          className="border-2 border-gray-400 duration-300  hover:border-gray-900"
-          variant="outlined"
-        >
-          Register
-        </Button>
+      </div>
+      <div id="sidebar-container" className="block sm:hidden">
+        <Sidebar />
       </div>
     </div>
   )

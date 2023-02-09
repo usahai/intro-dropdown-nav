@@ -1,7 +1,11 @@
 import HomePage from '@/containers/HomePage'
+import { useSidebarContext } from '@/contexts/SidebarContext'
+import clsx from 'clsx'
 import Head from 'next/head'
 
 export default function Home() {
+  const { isOpen, handleChange } = useSidebarContext()
+
   return (
     <>
       <Head>
@@ -10,10 +14,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <main id="body">
+      <main id="body-container">
         <div
           id="index-container"
-          className="mx-auto flex max-w-6xl justify-center font-epilogue xs:h-[calc(100vh-4rem)]"
+          className={clsx(
+            'mx-auto flex max-w-6xl justify-center font-epilogue',
+            {
+              ['z-20 h-full w-full overflow-hidden bg-black/60']: isOpen,
+            },
+          )}
+          onClick={handleChange}
         >
           <HomePage />
         </div>
