@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = ({
       className,
       {
         ['rounded-xl border border-black']: variant === 'outlined',
-        ['w-[12rem] rounded-2xl border-2 border-solid border-black bg-black !p-4 text-lg font-semibold !text-almostWhite sm:duration-500 sm:hover:bg-white sm:hover:!text-almostBlack']:
+        ['w-[12rem] rounded-2xl border-2 border-solid border-black bg-black !p-4 text-lg font-medium !text-almostWhite sm:duration-500 sm:hover:bg-white sm:hover:!text-almostBlack']:
           variant === 'filled',
       },
       'py-2 px-4 font-medium text-mediumGray hover:text-almostBlack',
